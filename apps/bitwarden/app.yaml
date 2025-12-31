@@ -14,8 +14,8 @@ spec:
     targetRevision: 2025.10.1
     helm:
       valueFiles:
-      - $values/base/kubernetes/bitwarden/values/values.yaml
-  - repoURL: 'https://github.com/DawidDe/homelab.git'
+      - $values/values/bitwarden.yaml
+  - repoURL: 'https://github.com/dawidde/argocd-values.git'
     targetRevision: HEAD
     path: base/kubernetes/bitwarden
     ref: values

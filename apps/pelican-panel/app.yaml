@@ -14,8 +14,8 @@ spec:
     targetRevision: 0.1.18
     helm:
       valueFiles:
-      - $values/base/kubernetes/pelican-panel/values.yaml
-  - repoURL: 'https://github.com/DawidDe/homelab.git'
+      - $values/values/pelican-panel.yaml
+  - repoURL: 'https://github.com/dawidde/argocd-values.git'
     targetRevision: HEAD
     path: base/kubernetes/pelican-panel
     ref: values
