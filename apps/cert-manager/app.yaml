@@ -6,19 +6,12 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: cert-manager
+    namespace: jellyfin
     server: 'https://kubernetes.default.svc'
   sources:
-  - repoURL: 'https://charts.jetstack.io'
-    chart: cert-manager
-    targetRevision: 1.19.1
-    helm:
-      valueFiles:
-      - $values/values/cert-manager.yaml
-  - repoURL: 'https://github.com/dawidde/argocd-values.git'
-    targetRevision: HEAD
-    path: base/kubernetes/cert-manager
-    ref: values
+  - repoURL: 'https://github.com/dawidde/kustomize-overlays'
+    path: apps/cert-manager/overlays/prod
+    targetRevision: main
   project: default
   syncPolicy:
     automated:
