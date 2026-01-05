@@ -9,12 +9,9 @@ spec:
     namespace: external-secrets-operator
     server: 'https://kubernetes.default.svc'
   sources:
-  - repoURL: 'https://charts.external-secrets.io/'
-    chart: external-secrets
-    targetRevision: 1.0.0
-  - repoURL: 'https://github.com/DawidDe/homelab.git'
-    targetRevision: HEAD
-    path: base/kubernetes/external-secrets-operator
+  - repoURL: 'https://github.com/dawidde/kustomize-overlays'
+    path: apps/external-secrets-operator/overlays/prod
+    targetRevision: main
   project: default
   syncPolicy:
     automated:
