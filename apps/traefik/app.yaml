@@ -9,15 +9,9 @@ spec:
     namespace: traefik
     server: 'https://kubernetes.default.svc'
   sources:
-  - repoURL: 'https://traefik.github.io/charts'
-    chart: traefik
-    targetRevision: 37.0.0
-    helm:
-      valueFiles:
-      - $values/values/traefik.yaml
-  - repoURL: 'https://github.com/dawidde/argocd-values.git'
-    targetRevision: HEAD
-    ref: values
+  - repoURL: 'https://github.com/dawidde/kustomize-overlays'
+    path: apps/traefik/overlays/prod
+    targetRevision: main
   project: default
   syncPolicy:
     automated:
