@@ -2,15 +2,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: external-secrets-operator
+  name: external-secrets
   namespace: argocd
 spec:
   destination:
-    namespace: external-secrets-operator
+    namespace: external-secrets
     server: 'https://kubernetes.default.svc'
   sources:
-  - repoURL: 'https://github.com/dawidde/kustomize-overlays'
-    path: apps/external-secrets-operator/overlays/prod
+  - repoURL: 'git@github.com:dawidde/kustomize-overlays.git'
+    path: apps/external-secrets/overlays/prod
     targetRevision: main
   project: default
   syncPolicy:

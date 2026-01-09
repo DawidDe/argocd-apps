@@ -9,7 +9,7 @@ spec:
     namespace: bitwarden
     server: 'https://kubernetes.default.svc'
   sources:
-  - repoURL: 'https://github.com/dawidde/kustomize-overlays'
+  - repoURL: 'git@github.com:dawidde/kustomize-overlays.git'
     path: apps/bitwarden/overlays/prod
     targetRevision: main
   project: default

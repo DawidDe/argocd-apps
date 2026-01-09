@@ -9,7 +9,7 @@ spec:
     namespace: jellyfin
     server: 'https://kubernetes.default.svc'
   sources:
-  - repoURL: 'https://github.com/dawidde/kustomize-overlays'
+  - repoURL: 'git@github.com:dawidde/kustomize-overlays.git'
     path: apps/jellyfin/overlays/prod
     targetRevision: main
   project: default
